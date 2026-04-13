@@ -150,7 +150,7 @@ section {
 /* Hero section  */
 .marketing-hero {
     /* FIXED: Use linear-gradient for the overlay and a comma before the URL */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/tools/student3.jpg');  
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('student3.jpg');  
     /* 3. Positioning and Sizing */
     background-size: cover;       
     background-position: center;  
