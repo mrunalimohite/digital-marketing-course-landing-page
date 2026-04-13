@@ -1,0 +1,1795 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+html{
+    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 65.5%;
+    /* ADD THIS LINE: Matches your header height */
+    scroll-padding-top: 80px; 
+    scroll-behavior: smooth; /* Optional: adds a nice sliding effect */
+}
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    /* justify-content: space-between; 
+    align-items: center;           
+    padding: 1rem 5%;             
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    position: sticky;
+    z-index: 1000; */
+    justify-content: space-around; 
+    align-items: center;            /* Vertical centering */
+    padding: 0 5%;                  /* Consistent side breathing room */
+    height: 90px;                   /* Fixed height makes alignment easier */
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+}
+
+.logo img {     
+    height: 85px; 
+    width: auto;             /* Keeps the logo proportions correct */
+    display: block;                /* Removes extra space at the bottom of the image */
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Slight zoom effect when hovering over the logo */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;                     /* Modern way to add space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #212121;                /* The dark charcoal from the brand colors */
+    font-weight: 500;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+    padding-left: 1.2rem;
+}
+
+.nav-links a:hover {
+    color: #f06529;                /* Brand orange on hover */
+}
+.nav-list.active {
+  color: #f06529;
+}
+/* Position the parent container */
+.dropdown {
+    position: relative;
+}
+
+/* Style the hidden menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-top: 3px solid #f06529; /* Branded accent */
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1002;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown.active .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+/* Style individual dropdown links */
+.dropdown-menu li a {
+    padding: 12px 20px;
+    font-size: 1.3rem;
+    color: #212121;
+    display: block;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #FFF2EB; /* Light orange tint */
+    color: #f06529;
+}
+
+/* Icon adjustment */
+.nav-list i {
+    font-size: 1rem;
+    margin-left: 5px;
+}
+/* Styles the Book Free Demo button to match the Techkraftiers look */
+.btn-primary {
+    background-color: #f06529; /* Techkraftiers Orange */
+    color: #fff;
+    padding: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 50px; /* Makes it pill-shaped */
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(240, 101, 41, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #d44b1d;
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 6px 20px rgba(240, 101, 41, 0.6);
+}
+.menu {
+    display: none; /* Hidden by default, shown on mobile */
+    cursor: pointer;
+}
+.menu span i{
+    font-size: 2rem;
+    color: #212121;
+}
+
+section {
+    padding: 4rem 9%; /* Standardize internal space */
+    margin: 0; /* REMOVE all external margins to kill white gaps */
+    overflow: hidden
+}
+/* Hero section  */
+.marketing-hero {
+    /* FIXED: Use linear-gradient for the overlay and a comma before the URL */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/tools/student3.jpg');  
+    /* 3. Positioning and Sizing */
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    height: 80vh; /* Reduced from 90vh to bring content up higher on the page */
+    min-height: 600px; /* Ensures it doesn't get too small on laptops */                
+    display: flex;
+    flex-direction: column; /* Ensures text stacks vertically if you have a <h1> and <p> */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;              
+}
+.hero-content h1 {
+    font-size: 4.2rem; /* Large and bold */
+    margin-bottom: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+.hero-content p span{
+    color: #f06529;
+    font-weight: 600;
+}
+
+.hero-content .btn-primary {
+    background-color: #f06529; /* Techkraftiers Orange */
+    color: #fff;
+    padding: 1.2rem 2em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 10px; /* Makes it pill-shaped */
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(240, 101, 41, 0.4);
+}
+
+.hero-content .btn-primary:hover {
+    background-color: #d44b1d;
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 6px 20px rgba(240, 101, 41, 0.6);
+}
+
+/* === Pain point section === */
+.Pain-Point {
+    padding: 2rem 9%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.Pain-Point h2 {
+    color: #212121;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 2rem;
+}
+.Pain-Point p{
+    color: #555;
+    font-size: 1.4rem;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.comparison-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 3rem 0;
+}
+
+.box {
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.theory {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+}
+.theory h3 {
+    font-size: 1.4rem;
+}
+.practical {
+    background: #FFF2EB; /* Very light brand orange tint */
+    border: 2px solid #f06529;
+}
+
+.practical h3 {
+    color: #f06529;
+    font-size: 1.4rem;
+}
+
+.box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.box li {
+    margin: 15px 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.stats-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    margin-top: 3rem;
+}
+.stat-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 1.2rem 0;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+.stat-item i{
+    font-size: 3rem;
+    color: #555;
+}
+.stat-item h4{
+    font-size: 1.6rem;
+    color: #f06529;
+}
+.stat-item p{
+    font-size: 1.2rem;
+    color: #555;
+}
+.stat-item:hover{
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(240, 101, 41, 0.6);
+}
+.stat-item:hover i, .stat-item:hover p{
+    color: #fff;
+}
+
+/* ==== Course Modules  ===*/
+.modules-section { 
+    padding: 60px 5%; /* Increased side space for better breathing room */
+    width: 100%;
+    /* Removed max-width here so the grid can grow on desktop */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fafafa; /* Subtle background to make white cards pop */
+}
+
+/* THE CONTAINER FIX: Centered box like the image */
+.course-container {
+    max-width: 900px; /* Adjust this to match your preferred width */
+    width: 100%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft shadow like the image */
+    margin-bottom: 50px;
+    text-align: left; /* Keeps text readable */
+}
+.course-container:hover {
+    box-shadow: 0 10px 30px rgba(240, 101, 41, 0.4);
+}
+.course-container h2 {
+    color: #f06529; /* Branded color for the main title */
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+.course-container h3 {
+    color: #f06529; /* Branded color for the section titles */
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+.course-container p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.course-container ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Split list into 2 columns on desktop */
+    gap: 12px;
+    margin: 1rem 0 1rem 0;
+}
+
+.course-container li {
+    font-size: 1.4rem;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Custom Orange Checkmarks */
+.course-container li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #f06529;
+    font-weight: bold;
+}
+
+/* KEEPING YOUR MODULES STYLE */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1200px; /* Allows the grid to be wider than the overview box */
+}
+
+.module-card {
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    transition: 0.3s;
+    text-align: center; /* Centers icons and text inside cards */
+}
+
+.module-card:hover { 
+    border-color: #f06529; 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+/* .module-card {
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.module-card:hover { 
+    border-color: #f06529; 
+    transform: translateY(-5px); 
+} */
+.module-card i { 
+    font-size: 3rem; 
+    color: #f06529; 
+    margin-bottom: 15px; 
+}
+.module-card h3 { 
+    font-size: 1.6rem; 
+    color: #212121; 
+}
+.module-card p { 
+    font-size: 1.2rem; 
+    color: #555; 
+    margin-top: 10px; 
+}
+
+/* === Why Choose Us Section === */
+.why-us {
+    background-color: #fff; /* The light peach tint from your image */
+    text-align: center;
+}
+
+.why-us-header h2 {
+    font-size: 2.4rem;
+    color: #212121;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.why-us-header p {
+    color: #666;
+    margin-bottom: 4rem;
+    font-size: 1.4rem;
+}
+
+.why-us-grid {
+    display: grid;
+    /* This creates a 3-column layout on desktops */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.why-card {
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4rem 2rem;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* Soft, subtle shadow */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(240, 101, 41, 0.4);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    font-size: 1.6rem;
+    color: #f06529; /* Brand Orange */
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* === Curriculum Section === */
+.curriculum-section{
+    background-color: #FFF2EB; /* The light peach tint from your image */
+}
+.curriculum-container{
+    max-width: 900px; /* Adjust this to match your preferred width */
+    width: 100%;
+    background: #fff;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04); /* Soft shadow like the image */
+    margin-bottom: 50px;
+    text-align: left; /* Keeps text readable */
+}
+.curriculum-container:hover {
+    border-color: #f06529;
+    box-shadow: 0 10px 30px rgba(240, 101, 41, 0.4);
+}
+.curriculum-container h2 {
+    color: #f06529; /* Branded color for the main title */
+    margin: 1.2rem 0;
+    font-size: 2rem;
+}
+.curriculum-container p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+/* === Pricing Section === */
+.pricing-section { 
+    background: #f9f9f9; 
+}
+.pricing-section h2 {
+    font-size: 2.4rem;
+    color: #212121;
+    margin-bottom: 2.5rem;
+    margin-top: 1.2rem;
+    text-align: center;
+}
+.pricing-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: stretch; /* Ensures all cards are the same height */
+    gap: 25px; 
+    flex-wrap: wrap; 
+}
+
+.price-card { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 20px; 
+    width: 300px; 
+    text-align: center; 
+    position: relative; 
+    border: 1px solid #ddd;
+    
+    /* NEW: Flexbox to align content */
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0;
+    
+    /* NEW: Pushes the button to the bottom */
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically within the space */
+}
+
+/* Ensure list items don't have conflicting double margins */
+.price-card ul li {
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: 1rem 0; /* Reduced from 2rem to prevent overflow */
+}.price-card h3 {
+    font-size: 1.5rem;
+    color: #212121;
+}
+.price-card .price{
+    font-size: 2.5rem;
+    color: #f06529;
+    margin: 20px 0;
+}
+
+.price-card.featured { 
+    border: 2px solid #f06529; 
+    transform: scale(1.05); 
+}
+.popular-tag { 
+    position: absolute; 
+    top: -15px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background: #f06529; 
+    color: white; 
+    padding: 1rem 1.5rem; 
+    border-radius: 20px; 
+    font-size: 1.2rem;
+}
+.btn-outline{
+    display: inline-block; /* Add this line */
+    margin-top: 2rem;
+    background-color: transparent;
+    color: #f06529;
+    padding: 1rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: 2px solid #f06529;
+    transition: all 0.3s ease;
+}
+.btn-outline:hover {
+    background-color: #f06529;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(240, 101, 41, 0.6);
+}
+
+/* === Tool section === */
+.tools {
+    padding: 80px 10%;
+    background-color: #fcfcfc; /* Subtle off-white to make the container pop */
+    text-align: center;
+}
+.tools h2 {
+    font-size: 2.2rem;
+    color: #0b2149; /* Dark professional blue */
+    margin-bottom: 15px;
+}
+.tools p {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 25px; /* Increased bottom margin */
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+.tool-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05); /* Soft shadow like your image */
+    text-align: center;
+}
+.tool-container:hover {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+} 
+/* The Grid System */
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    /* Increase vertical gap for a cleaner row look */
+    gap: 60px 30px; 
+    align-items: center;
+}
+
+.tool-box {
+    width: 100%;
+    /* Increase height slightly for better balance */
+    height: 80px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tool-box:hover {
+    transform: translateY(-5px); /* Gentle lift on hover */
+}
+
+.tool-box img {
+    /* Use 'max' properties so the logo keeps its natural shape */
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain;
+    display: block;
+    /* Remove fixed width/height to avoid tiny logos */
+}
+
+/* Hover effect to bring back color if you use grayscale */
+/* .tool-box:hover img { filter: grayscale(0%); } */
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .tool-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .tool-grid { grid-template-columns: repeat(2, 1fr); }
+    .tool-container { padding: 30px 15px; }
+}
+
+/* === certificate section === */
+.certificate-section{
+    background: linear-gradient(90deg, #2d2d2d 0%, #252525 100%);
+    padding: 80px 10%;
+    overflow: hidden;
+}
+.certificate-container{
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    color: #fff;
+}
+.certificate-container h2{
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+.certificate-container p{
+    font-size: 1.15rem;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    color: #ddd;
+}
+.certificate-container ul{
+    list-style: none;
+}
+.certificate-container ul li{
+    font-size: 1.2rem;
+    margin: 15px 0;
+    font-weight: 500;
+    position: relative;
+    padding: .8rem 0;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.certificate-container ul li i{
+    font-size: 1.8rem;
+}
+.btn-cert{
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #f06529;
+    color: #fff;
+    padding: 1rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+.btn-cert:hover {
+    background-color: #d44b1d;
+    color: white;
+    transform: translateY(-3px);
+}
+.cert-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Acts as a 'safe zone' for the image to expand into */
+}
+/* .cert-img img {
+    width: 100%;
+    max-width: 550px;
+    height: 350px;   
+    object-fit: contain;
+    transition: transform 0.5s ease;
+
+}
+
+} */
+.cert-img img {
+    width: 100%;
+    max-width: 550px;
+    height: 350px; 
+    object-fit: contain;
+    /* Ensure the transition is very smooth */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    border-radius: 8px; /* Adds a clean finish to the certificate edges */
+    cursor: pointer;
+}
+
+.cert-img img:hover {
+    transform: scale(1.05);
+}
+/* === Who Can Join Section === */
+.who-can-join {
+    text-align: center;
+    background-color: #fff;
+}
+
+.who-can-join h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #212121;
+}
+
+.audience-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    max-width: 500px; /* Prevents the line from getting too wide */
+    margin: 0 auto 30px auto;
+}
+
+.item {
+    background: #fff;
+    border: 1px solid #f06529; /* Branded border */
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: #212121;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    border-color: #f06529;
+    color: #f06529;
+    transform: translateY(-3px);
+}
+
+.no-exp {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* === Upcoming Batches === */
+.upcoming-batches {
+    background-color: #FFF2EB;
+    padding: 60px 10%;
+}
+.upcoming-batches h2 {
+    font-size: 2.4rem;
+    color: #212121;
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+.upcoming-batches .para{
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    text-align: left;
+}
+.batch-grid{
+    display: grid;
+    /* Adjusted minmax to prevent cards from getting too narrow */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;;
+}
+.batch-card{
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1.5px solid #f06529;
+    transition: 0.3s;
+    /* CRITICAL: Makes all cards in a row the same height */
+    display: flex;
+    flex-direction: column;
+}
+.batch-card:hover {
+    border-color: #d44b1d;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.batch-info {
+    /* Pushes the button to the absolute bottom of the card */
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.batch-info h3{
+    font-size: 1.8rem;
+    color: #212121;
+    margin-bottom: 1.4rem;
+}
+
+.batch-info p{
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: .8rem;
+}
+.batch-info p span{
+    color: #1a1a1a;
+    font-weight: 600;
+}
+.batch-btn{
+    display: block;
+    width: 100%;
+    text-align: center; /* Centers the text inside the button */
+    margin-top: auto;   /* Works with flex-grow above for perfect alignment */
+    background-color: #f06529;
+    color: #fff;
+    padding: 1.2rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.batch-btn:hover {
+    background-color: #d44b1d;
+    color: white;
+    transform: translateY(-3px);
+}
+/* === Internship & Bonus (Dark) === */
+/* job ready section */
+.internship-section, .bonus-section {
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Internship Cards */
+.internship-section{
+    background-color: #212121;
+    padding: auto 5%;
+}
+.internship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.section-title h2 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+.section-title p {
+    color: #ddd;
+    font-size: 1.3rem;
+}
+.intern-card {
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.intern-card:hover {
+    border-color: #f06529;
+    box-shadow: 0 4px 8px rgba(197, 197, 197, 0.3);
+    transform: translateY(-5px);
+}
+
+.intern-card i {
+    font-size: 2.5rem;
+    color: #f06529; /* Brand Orange */
+    margin-bottom: 20px;
+}
+
+.intern-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #212121;
+}
+.intern-card p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* === Bonus Tags Style ==== */
+.bonus-section {
+    background-color: #FFF2EB; /* Light tint for section separation */
+}
+
+/* Container Setup */
+.list-container {
+    max-width: 700px; /* Kept narrow for better readability */
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: left; /* Essential for the list look */
+}
+
+.list-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #212121;
+    text-align: center; /* Heading stays centered for balance */
+}
+
+/* Who Can Join - Simple List */
+.vertical-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.check-icon {
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.list-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.no-exp-tag {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #f06529;
+}
+
+/* Bonus Section - Wide Cards */
+.bonus-section {
+    background-color: #FFF2EB; /* Light brand tint */
+    padding: 2rem 0;
+}
+
+.bonus-card-wide {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 6px solid #f06529; /* Orange brand accent */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+}
+
+.bonus-info h3 {
+    color: #f06529;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.bonus-info p {
+    color: #666;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Hover Effect */
+.bonus-card-wide:hover {
+    transform: translateX(10px);
+    transition: 0.3s ease;
+}
+
+/* === Compact Testimonials Section === */
+.testimonials {
+    padding: 4rem 9%; /* More vertical space */
+    background-color: #fff;
+    text-align: center;
+}
+.testimonials h2 {
+    font-size: 2.4rem;
+    color: #212121;
+    margin-bottom: 1.2rem;
+}
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Wider gap between cards */
+    margin: 40px 0;
+}
+
+.test-card {
+    background: #ffffff;
+    padding: 40px 30px; /* Generous padding makes it feel bigger */
+    border-radius: 15px;
+    width: 380px; /* Increased width */
+    border-left: 6px solid #f06529; /* Branded accent */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left inside the card */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.test-card:hover {
+    transform: translateY(-10px); /* Lift effect */
+}
+
+/* Student Name Styling */
+.test-card h4 {
+    font-size: 1.4rem;
+    color: #212121;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+/* Stars Styling */
+.stars {
+    margin-bottom: 15px;
+}
+
+.stars i {
+    color: #f06529;
+    font-size: 1.2rem;
+    margin-right: 2px;
+}
+
+/* Quote Styling */
+.review-text {
+    font-size: 1.2rem; /* Larger text for the actual review */
+    color: #444;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+}
+
+.test-card p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.4;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Optional: Style for a "half-star" or "empty star" if needed */
+.stars .fa-star-half-alt, 
+.stars .far.fa-star {
+    color: #f06529;
+}
+
+.load-more{
+    border: none;
+    background-color: #f06529;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+}
+.load-more:hover {
+    background-color: #d44b1d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(240, 101, 41, 0.6);
+}
+
+/* === Gallery Section === */
+.institute-showcase {
+    padding: 80px 10%;
+    background-color: #f9f9f9;
+}
+.institute-showcase h2 {
+    font-size: 2.4rem;
+    color: #212121;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+/* --- 1. Layout Container (Expanded for 2 new photos) --- */
+.main-mosaic-container {
+    display: grid;
+    grid-template-columns: 350px 1fr 1fr; 
+    /* Increased to 4 rows to accommodate new images */
+    grid-template-rows: repeat(4, 220px); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    /* New Map: Poster now spans 2 rows to match Mentor Card height */
+    grid-template-areas: 
+        "mentor wide wide"
+        "mentor s1   s2"
+        "poster s1   s2"
+        "poster s3   s4";
+}
+
+/* --- 2. Mentor Card Fixes --- */
+.profile-card {
+    grid-area: mentor;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Softer shadow for cleaner look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #f06529;
+}
+
+.circle-frame {
+    width: 180px; /* Adjusted size for better proportions */
+    height: 220px; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- 3. Area Mapping & New Items --- */
+.item-mentor { grid-area: mentor; }
+.item-wide   { grid-area: wide; }
+.item-s1     { grid-area: s1; }
+.item-s2     { grid-area: s2; }
+.item-poster { grid-area: poster; }
+.item-s3     { grid-area: s3; } /* New mapping */
+.item-s4     { grid-area: s4; } /* New mapping */
+
+.photo-item {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative; /* Essential for the labels to be visible */
+    background: #eee;
+}
+.profile-card h2 {
+    font-size: 2rem;
+    color: #212121;
+    margin-bottom: 5px;
+}
+.profile-card p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.circle-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.role {
+    color: #f06529;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* --- 3. Gallery Item Styling --- */
+.photo-item {
+    border-radius: 15px;
+    overflow: hidden;
+    background: #eee; /* Fallback color */
+    position: relative;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+.label {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 1rem 1.4rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 1;
+}
+
+/* --- 5. Responsive Fix (Essential) --- */
+@media (max-width: 1024px) {
+    .main-mosaic-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "mentor mentor"
+            "poster wide"
+            "s1 s2";
+    }
+}
+
+@media (max-width: 600px) {
+    .main-mosaic-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "mentor"
+            "poster"
+            "wide"
+            "s1"
+            "s2"
+            "s3"
+            "s4";
+    }
+}
+/* 4. Responsive Design */
+@media (max-width: 1024px) {
+    .main-mosaic-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "mentor mentor"
+            "poster wide"
+            "s1 s2"
+            "s3 s4";
+    }
+}
+
+@media (max-width: 768px) {
+    /* .main-mosaic-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "mentor"
+            "poster"
+            "wide"
+            "s1"
+            "s2";
+    } */
+    .main-mosaic-container {
+        display: flex; /* Switch to flex for easier mobile stacking */
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .photo-item, .profile-card {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3; /* Keeps photos from looking too long */
+    }
+    
+    /* .photo-item img {
+        aspect-ratio: 16/9;
+    } */
+}
+/* === FAQ Section === */
+.faq-section {
+    background-color: #fff;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #212121;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* The Accordion Box */
+details {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* The Question Bar */
+summary {
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none; /* Removes default arrow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #212121;
+}
+
+/* Custom Icon  */
+summary::after {
+    content: '+';
+    font-size: 1.8rem; /* Slightly larger plus sign */
+    line-height: 0;
+    color: #f06529;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Open State Styling */
+details[open] {
+    border-color: #f06529;
+    background: #fffefe;
+    box-shadow: 0 10px 25px rgba(240, 101, 41, 0.05);
+}
+
+details[open] summary {
+    color: #f06529;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+details[open] summary::after {
+    content: '-'; /* Minus sign when open */
+    transform: rotate(180deg);
+}
+
+/* The Answer Text */
+.faq-content {
+    padding: 20px 30px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.4rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Simple animation for opening */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Tweak */
+/* @media (max-width: 768px) {
+    summary { font-size: 1rem; padding: 15px 20px; }
+} */
+
+
+/* ==== Contact Section Styling ==== */
+.contact-section {
+    background-color: #1a1a1a; /* Dark charcoal background */
+    padding: 80px 10%;
+    color: #ffffff;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Panel Styling */
+.contact-info-panel {
+    flex: 1;
+}
+
+.contact-info-panel h2 {
+    font-size: 3rem;
+    color: #f06529; /* Techkraftiers Orange */
+    margin-bottom: 20px;
+}
+
+.contact-info-panel p {
+    color: #aaa;
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.icon-box {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(240, 101, 41, 0.1); /* Subtle orange glow */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box i {
+    color: #f06529;
+    font-size: 2rem;
+}
+
+.text-box h4 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.text-box span {
+    color: #ccc;
+    font-size: 1.4rem;
+}
+
+/* Right Panel Form Styling */
+.contact-form-panel {
+    flex: 1;
+    background-color: #242424; /* Slightly lighter dark for the card */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.contact-form-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form-panel input, 
+.contact-form-panel textarea {
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form-panel input:focus, 
+.contact-form-panel textarea:focus,
+.contact-form-panel select:focus {
+    border-color: #f06529;
+}
+.contact-form-panel select{
+    width: 100%;
+    padding: 1.2rem; /* Adjust to match your input padding */
+    background-color: #333; /* Matches your dark input background */
+    color: #999; /* Matches the placeholder color in your inputs */
+    border: 1px solid #444; /* Standardizes the border */
+    border-radius: 8px; /* Matches your input corners */
+    font-size: 1.4rem; /* Ensures consistent text size */
+    font-family: inherit; /* Inherits the site's primary font */
+    outline: none;
+    /* Removes default browser styling (important for the arrow) */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.contact-form-panel select option {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+.contact-form-panel button {
+    background-color: #f06529;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-form-panel button:hover {
+    background-color: #d44b1d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(240, 101, 41, 0.6);
+}
+.contact-form-panel button i{
+    color: #fff;
+    font-size: 2rem;
+
+}
+/* === Footer ==== */
+.footer-content{
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem 10%;
+    font-size: 1.2rem;
+} 
+
+.social-links{
+    display: flex;
+    gap: 15px;
+}
+.social-links a {
+    color: #fafafa;;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+.social-links a:hover {
+    color: rgb(52, 95, 171);
+}
+
+@media (max-width: 1090px) {
+    .menu{
+        display: block;
+        /* FIXED: Removed position absolute so it sits in the flex row naturally */
+        position: static; 
+        z-index: 1001;
+        top: 3rem;
+        right: 2rem;
+    }
+    header {
+        /* FIXED: Changed from column to row to keep logo and menu side-by-side */
+        flex-direction: row; 
+        justify-content: space-between; 
+        padding: 1rem 5%;
+        height: auto; /* Keep height consistent */
+        position: sticky;
+    }
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        width: 75%; 
+        /* Ensure height is strictly limited so it HAS to scroll */
+        height: calc(100vh - 80px); 
+        background-color: #ffffff;
+        padding: 2rem;
+        z-index: 1000;
+        
+        /* FIX: Ensure scrollbar is enabled and visible */
+        overflow-y: auto; 
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .navbar.active {
+        display: flex;
+    }
+
+    .nav-links{
+        display: flex; /* Ensure flex is active */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        width: 100%;
+        padding-bottom: 5rem; /* Extra space at bottom so last item isn't cut off */
+        
+        /* FIX: Change 'hidden' to 'visible' so it doesn't clip the scrollbar */
+        overflow: visible 
+    }
+
+    .nav-links li a {
+        display: block; /* Critically important for width */
+        width: 80vw;
+        font-size: 1.8rem;
+        padding: 1.2rem 1rem;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+        color: #212121;
+        font-weight: 500;
+        transition: background 0.3s ease;
+        box-sizing: border-box;
+    }
+    .nav-links a:hover {
+        border-left: 1px solid #f06529;
+        background-color: #f5f5f5; 
+        border-left: 4px solid #f06529; /* Adds a nice branded accent */
+    }
+        
+    .nav-cta{
+        display: none;
+    }
+    .dropdown-menu {
+        display: none; 
+        position: static; 
+        box-shadow: none;
+        padding-left: 2rem;
+        background: transparent;
+        border: none;
+    }
+
+    /* Only show when JavaScript toggles the 'active' class */
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        font-size: 1.6rem;
+        box-shadow: none;
+        width: 70vw; /* Prevents long text from hitting the edge */
+    }
+}
+@media (max-width: 992px) {
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive adjustment for mobile (1 column) */
+@media (max-width: 600px) {
+    .why-us-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    html{
+        font-size: 60%;
+    }
+    /* Standardize all grid containers to center content */
+    .comparison-container,
+    .why-us-grid,
+    .pricing-container,
+    .testimonial-grid,
+    .internship-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* This stops the left-shift */
+        gap: 20px;
+        width: 100%;
+    }
+
+    .box, 
+    .why-card, 
+    .price-card, 
+    .test-card, 
+    .intern-card {
+        width: 100% !important; /* Ensure they take full available width */
+        max-width: 400px;      /* But don't let them get too wide */
+    }
+
+    /* Fix the featured pricing card scale issue on mobile */
+    .price-card.featured {
+        transform: scale(1); 
+        margin: 10px 0;
+    }
+    .contact-container {
+        display: flex; /* Flex is more reliable for simple vertical stacks */
+        flex-direction: column;
+        gap: 40px;
+        padding: 0;
+    }
+
+    .contact-info-panel, .contact-form-panel {
+        width: 100%;
+        text-align: left; /* Ensures contact text stays left-aligned */
+    }
+
+    .info-item {
+        justify-content: flex-start; /* Keeps icons and text aligned left */
+    }
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.4rem;
+        padding: 2rem 10%;
+        font-size: 1.2rem;
+    } 
+
+    .social-links{
+        display: flex;
+        gap: 15px;
+    }
+    .social-links a {
+        color: #fafafa;;
+        font-size: 2rem;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .gallery-container {
+        grid-template-areas: 
+            "wide"
+            "tall"
+            "s1"
+            "s2"
+            "red"
+            "green";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .gallery-container img {
+        aspect-ratio: 16 / 9;
+    }
+    .gallery-item img {
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media (max-width: 480px) {
+    html{
+        font-size: 55%;
+    }
+    .contact-section {
+        padding: 60px 5%; /* Reduces large side padding for small screens */
+    }
+    .hero-content h1 {
+        font-size: 2.8rem; /* Shrink title for small phones */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .marketing-hero {
+        padding: 0 5%;
+    }
+}
