@@ -52,7 +52,7 @@ This landing page is designed to:
 
 ## 📸 Preview
 
-digital-marketing-course-landing-page/website-img.png
+[digital-marketing-course-landing-page/website-img.png](https://github.com/mrunalimohite/digital-marketing-course-landing-page/blob/ff5225e7bff24bbb604068320dfd2eff93db6078/website-img.png)
 
 
 ## 🔧 Future Improvements
