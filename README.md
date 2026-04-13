@@ -2,7 +2,6 @@
 
 A modern, responsive, and user-friendly landing page designed for promoting a Digital Marketing course. This project focuses on clean UI design, structured content, and conversion optimization.
 
----
 
 ## 🚀 Features
 
@@ -19,7 +18,6 @@ A modern, responsive, and user-friendly landing page designed for promoting a Di
 - ✅ Smooth scrolling navigation
 - ✅ Font Awesome icons integration
 
----
 
 ## 🛠️ Technologies Used
 
@@ -28,9 +26,6 @@ A modern, responsive, and user-friendly landing page designed for promoting a Di
 - Google Fonts (Roboto)
 - Font Awesome Icons
 
----
-
----
 
 ## 📌 Sections Included
 
@@ -46,7 +41,6 @@ A modern, responsive, and user-friendly landing page designed for promoting a Di
 - FAQ Section
 - Contact Section
 
----
 
 ## 🎯 Purpose
 
@@ -69,7 +63,6 @@ website-img.png
 - Add login/signup system
 - Improve SEO optimization
 
----
 
 ## 👨‍💻 Author
 
