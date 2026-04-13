@@ -150,7 +150,7 @@ section {
 /* Hero section  */
 .marketing-hero {
     /* FIXED: Use linear-gradient for the overlay and a comma before the URL */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/tools/student3.jpg');  
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('student3.jpg');  
     /* 3. Positioning and Sizing */
     background-size: cover;       
     background-position: center;  
@@ -759,7 +759,8 @@ section {
 } */
 .cert-img img {
     width: 100%;
-    height: auto;
+    max-width: 550px;
+    height: 350px;  
     object-fit: contain;
     /* Ensure the transition is very smooth */
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
