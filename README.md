@@ -52,7 +52,7 @@ This landing page is designed to:
 
 ## 📸 Preview
 
-website-img.png
+digital-marketing-course-landing-page/website-img.png
 
 
 ## 🔧 Future Improvements
@@ -69,7 +69,6 @@ website-img.png
 Mrunali Mohite  
 Frontend Developer
 
----
 
 ## ⭐ Show Your Support
 
