@@ -56,13 +56,10 @@ This landing page is designed to:
 - Generate leads and conversions
 - Showcase course curriculum and benefits
 
----
-
 ## 📸 Preview
 
-(Add screenshots here if needed)
+website-img.png
 
----
 
 ## 🔧 Future Improvements
 
