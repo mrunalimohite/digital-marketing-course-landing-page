@@ -13,31 +13,17 @@
             <img src="logo.jpeg" alt="This is logo">
         </div>
         <nav class="navbar" id="navList">
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-list">Home</a></li>
-                <!-- <li><a href="#courses" class="nav-list">Course Overview</a></li> -->
-                <li class="dropdown">
-                    <a href="#courses" class="nav-list">Course Overview <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#certification">Certifications</a></li>
-                        <li><a href="#tools">Professional Tools</a></li>
-                        <li><a href="#batches">Upcoming Batches</a></li>
-                    </ul>
-                </li>
-                <li><a href="#features" class="nav-list">Why Us</a></li>
-                <li><a href="#curriculum" class="nav-list">Curriculum</a></li>
-                <li><a href="#pricing" class="nav-list">Plans</a></li>
-                <li><a href="#reviews" class="nav-list">Reviews</a></li>
-                <li><a href="#gallery" class="nav-list">Gallery</a></li>
-                <li><a href="#faq" class="nav-list">FAQs</a></li>
-                <li><a href="#contact" class="nav-list">Contact</a></li>
-            </ul>
+            <a href="#home" class="navLinks">Home</a>
+            <a href="#courses" class="navLinks">Course Overview</a>
+            <a href="#features" class="navLinks">Why Us</a>
+            <a href="#pricing" class="navLinks">Plans</a>
+            <a href="#reviews" class="navLinks">Reviews</a>
+            <a href="#gallery" class="navLinks">Gallery</a>
+            <a href="#faq" class="navLinks">FAQs</a>
+            <a href="#contact" class="navLinks">Contact</a>
         </nav>
-        <!-- <div class="nav-cta">
-            <a href="#contact" class="btn-primary">Book Free Demo </a>
-        </div> -->
-        <div class="menu">
-            <span><i class="fa-solid fa-bars" id="menu"></i></span>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
         </div>
     </header>
     <!-- Hero Section -->
@@ -51,7 +37,7 @@
     </section>
     <!-- Pain Point Section -->
      <section class="Pain-Point">
-        <h2>Tired of Learning Theory? Start Working on Real Projects!</h2>
+        <h2>Tired of Learning Theory? <span>Start Working on Real Projects!</span></h2>
         <p>At Techkraftiers Digital, we don't just teach digital marketing — we make you job-ready with hands-on experience, live projects, and real client exposure.</p>
         <div class="comparison-container">
             <div class="box theory">
@@ -102,49 +88,49 @@
             </ul>
             <h3 style="margin: 2.4rem 0 1rem 0;">What You Will Learn</h3>
             <div class="modules-grid">
-                <div class="module-card">
+                <div class="module-card reveal">
                     <i class="fas fa-bullhorn"></i>
                     <h3>Campaign Mastery</h3>
                     <p>Run complete online marketing campaigns</p>
                 </div>
                 
-                <div class="module-card">
+                <div class="module-card reveal">
                     <i class="fas fa-chart-line"></i>
                     <h3>Brand Growth</h3>
                     <p>Build & promote brands organically and through ads</p>
                 </div>
 
-                <div class="module-card">
+                <div class="module-card reveal">
                     <i class="fas fa-users"></i>
                     <h3>Sales & Traffic</h3>
                     <p>Generate leads, traffic & sales for businesses</p>
                 </div>
 
-                <div class="module-card">
+                <div class="module-card reveal">
                     <i class="fas fa-chart-pie"></i>
                     <h3>Performance Tracking</h3>
                     <p>Analyze campaign performance using Analytics</p>
                 </div>
 
-                <div class="module-card">
+                <div class="module-card reveal">
                     <i class="fas fa-laptop-code"></i>
                     <h3>Site Optimization</h3>
                     <p>Optimize websites for Google (SEO + UI/UX)</p>
                 </div>
 
-                <div class="module-card">
+                <div class="module-card reveal">
                     <i class="fas fa-tasks"></i>
                     <h3>Channel Strategy</h3>
                     <p>Create content and manage marketing channels</p>
                 </div>
 
-                <div class="module-card">
+                <div class="module-card reveal">
                     <i class="fas fa-briefcase"></i>
                     <h3>Freelancing 101</h3>
                     <p>Pitch clients and start freelancing</p>
                 </div>
 
-                <div class="module-card">
+                <div class="module-card reveal">
                     <i class="fas fa-user-tie"></i>
                     <h3>Career Coaching</h3>
                     <p>Crack interviews confidently</p>
@@ -155,12 +141,12 @@
     <!-- Why Us Section -->
     <section id="features" class="why-us">
         <div class="why-us-header">
-            <h2>Why Choose TechKraftiers for Digital Marketing in Nerul?</h2>
+            <h2>Why Choose <span>TechKraftiers</span> for Digital Marketing in Nerul?</h2>
             <p>Become a job-ready digital marketer with 100% practical training and real client exposure.</p>
         </div>
 
         <div class="why-us-grid">
-            <div class="why-card">
+            <div class="why-card reveal">
                 <div class="icon-box">
                     <i class="fa-solid fa-chart-line"></i>
                 </div>
@@ -168,7 +154,7 @@
                 <p>Skip the boring theory. Start working on real-world digital marketing campaigns from Day 1.</p>
             </div>
 
-            <div class="why-card">
+            <div class="why-card reveal">
                 <div class="icon-box">
                     <i class="fa-solid fa-screwdriver-wrench"></i>
                 </div>
@@ -176,7 +162,7 @@
                 <p>Learn through live tools including Google Ads, Meta Business Suite, and SEO analytics platforms.</p>
             </div>
 
-            <div class="why-card">
+            <div class="why-card reveal">
                 <div class="icon-box">
                     <i class="fa-solid fa-briefcase"></i>
                 </div>
@@ -184,14 +170,14 @@
                 <p>Create actual marketing case studies and projects that you can show to employers during interviews.</p>
             </div>
 
-            <div class="why-card">
+            <div class="why-card reveal">
                 <div class="icon-box">
                     <i class="fa-solid fa-award"></i>
                 </div>
                 <h3>Internship & Certification</h3>
                 <p>Gain industry-recognized certificates and internship opportunities to kickstart your freelance or corporate career.</p>
             </div>
-            <div class="why-card">
+            <div class="why-card reveal">
                 <div class="icon-box">
                     <i class="fa-solid fa-rectangle-ad"></i>
                 </div>
@@ -199,7 +185,7 @@
                 <p>Get hands-on experience by managing actual budgets for Google and Meta Ads, not just learning the interface.</p>
             </div>
 
-            <div class="why-card">
+            <div class="why-card reveal">
                 <div class="icon-box">
                     <i class="fa-solid fa-chalkboard-user"></i>
                 </div>
@@ -390,6 +376,7 @@
                     <summary>Module 15 : Freelancing, Agency & Career Development</summary>
                     <div class="faq-content">
                         <ul>
+                            <li><strong>The ₹1,000 Strategy:</strong> Social Media & GMB setup</li>
                             <li>Building a Portfolio</li>
                             <li>Client Acquisition Strategy</li>
                             <li>Proposal & Pricing Structure</li>
@@ -417,62 +404,62 @@
 
     <!-- Tools Section -->
     <section class="tools" id="tools">
-        <h2>Master the Industry's Most Powerful Digital Tools</h2>
+        <h2>Master the Industry's Most Powerful <span>Digital Tools</span></h2>
         <p>
             Hands-on Training: Move beyond theory with practical sessions on premium tools like SEMrush, Ahrefs, and Canva.
         </p>
         <div class="tool-container" id="tools">
             <div class="tool-grid">
                 <div class="tool-box">
-                    <img src="wordpress-2.svg" alt="wordpress tools">
+                    <img src="/tools/wordpress-2.svg" alt="wordpress tools">
                 </div>
                 <div class="tool-box">
-                    <img src="woorank-icon.png" alt="woorank tools">
+                    <img src="/tools/woorank-icon.png" alt="woorank tools">
                 </div>
                 <div class="tool-box">
-                    <img src="whatsapp-business-bg.svg" alt="woorank tools">
+                    <img src="/tools/whatsapp-business-bg.svg" alt="woorank tools">
                 </div>
                 
                 <div class="tool-box">
-                    <img src="yt-studio-logo.svg" alt="YouTube Studio tools">
+                    <img src="/tools/yt-studio-logo.svg" alt="YouTube Studio tools">
                 </div>
                 <div class="tool-box">
-                    <img src="similarweb.svg" alt="similarweb tools">
+                    <img src="/tools/similarweb.svg" alt="similarweb tools">
                 </div>
                 <div class="tool-box">
-                    <img src="seo-tools-icon.png" alt="seo tools">
+                    <img src="/tools/seo-tools-icon.png" alt="seo tools">
                 </div>
                 <div class="tool-box">
-                    <img src="seo-optimizer.png" alt="seo optimizer tools">
+                    <img src="/tools/seo-optimizer.png" alt="seo optimizer tools">
                 </div>
                 <div class="tool-box">
-                    <img src="semrush.png" alt="semrush tools">
+                    <img src="/tools/semrush.png" alt="semrush tools">
                 </div><div class="tool-box">
-                    <img src="moz-icon.png" alt="moz tools">
+                    <img src="/tools/moz-icon.png" alt="moz tools">
                 </div><div class="tool-box">
-                    <img src="pingdom.png" alt="pingdom tools">
+                    <img src="/tools/pingdom.png" alt="pingdom tools">
                 </div><div class="tool-box">
-                    <img src="mailchamp-icon.png" alt="mailchimp tools">
+                    <img src="/tools/mailchamp-icon.png" alt="mailchimp tools">
                 </div><div class="tool-box">
-                    <img src="google-search-console.png" alt="google search console tools">
+                    <img src="/tools/google-search-console.png" alt="google search console tools">
                 </div><div class="tool-box">
-                    <img src="linkedin-ads.png" alt="linkedin ads tools">
+                    <img src="/tools/linkedin-ads.png" alt="linkedin ads tools">
                 </div><div class="tool-box">
-                    <img src="google-analytics-icon.png" alt="google analytics tools">
+                    <img src="/tools/google-analytics-icon.png" alt="google analytics tools">
                 </div><div class="tool-box">
-                    <img src="google-ads-icon.png" alt="google ads tools">
+                    <img src="/tools/google-ads-icon.png" alt="google ads tools">
                 </div><div class="tool-box">
-                    <img src="elementor-icon.png" alt="elementor tools">
+                    <img src="/tools/elementor-icon.png" alt="elementor tools" >
                 </div><div class="tool-box">
-                    <img src="ahref-icon.png" alt="ahref tools">
+                    <img src="/tools/ahref-icon.png" alt="ahref tools">
                 </div><div class="tool-box">
-                    <img src="buffe.png" alt="buffe tools">
+                    <img src="/tools/buffe.png" alt="buffe tools">
                 </div><div class="tool-box">
-                    <img src="canva-icon.png" alt="canva tools">
+                    <img src="/tools/canva-icon.png" alt="canva tools">
                 </div><div class="tool-box">
-                    <img src="chapgpt.png" alt="chatgpt tools">
+                    <img src="/tools/chapgpt.png" alt="chatgpt tools">
                 </div><div class="tool-box">
-                    <img src="copyai.png" alt="copyai tools">
+                    <img src="/tools/copyai.png" alt="copyai tools">
                 </div>
             </div>
         </div>
@@ -482,7 +469,7 @@
     <section class="certificate-section" id="certification">
         <div class="certificate-container">
             <div class="cetificate-info">
-                <h2>Earn Industry-Recognized Certificates</h2>
+                <h2>Earn <span>Industry-Recognized</span> Certificates</h2>
                 <p>Showcase your skills with certificates that validate your expertise in digital marketing and boost your resume.</p>
                 <ul class="cert-benefits">
                     <li><i class="fas fa-certificate"></i> Techkraftiers Verified Diploma</li>
@@ -503,7 +490,7 @@
     <section id="pricing" class="pricing-section">
         <h2>Choose Your Plan</h2>
         <div class="pricing-container" style="margin-top: 2rem;">
-            <div class="price-card">
+            <div class="price-card reveal">
                 <h3>Basic</h3>
                 <div class="price">₹4,999</div>
                 <ul>
@@ -513,7 +500,7 @@
                 </ul>
                 <a href="#contact" class="btn-outline">Book Free Demo</a>
             </div>
-            <div class="price-card featured">
+            <div class="price-card featured reveal">
                 <div class="popular-tag">Most Popular</div>
                 <h3>Advanced</h3>
                 <div class="price">₹7,999</div>
@@ -524,7 +511,7 @@
                 </ul>
                 <a href="#contact" class="btn-primary" style="margin-top: 1.2rem;"> Book Free Demo</a>
             </div>
-            <div class="price-card">
+            <div class="price-card reveal">
                 <h3>Pro</h3>
                 <div class="price">₹14,999.00</div>
                 <ul>
@@ -608,31 +595,64 @@
             </div>
         </div>
     </section>
+    <!-- Earning Section -->
+    <section class="earning-section">
+        <div class="earning-container">
+            <h2 class="reveal">💰 Earn Your First <span>₹1,000</span> During Your Course</h2>
+            <p class="earning-subtitle">Get real project experience, freelancing guidance, and income opportunities from day one.</p>
+            
+            <div class="earning-grid">
+                <div class="earn-card reveal">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Social Media Design</h3>
+                    <p>Create 5-10 posts for a local business.</p>
+                    <span class="price-tag">Earn ₹100-₹200 per post</span>
+                </div>
 
+                <div class="earn-card reveal">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Google Business Profile</h3>
+                    <p>Create and optimize business listings for nearby shops like salons or gyms.</p>
+                    <span class="price-tag">Earn ₹500-₹1,000 per client</span>
+                </div>
+
+                <div class="earn-card reveal">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h3>Content & Ads</h3>
+                    <p>Write captions or run simple Facebook/Instagram ads.</p>
+                    <span class="price-tag">Earn ₹500-₹1,000 per setup</span>
+                </div>
+            </div>
+
+            <div class="marketing-highlight reveal">
+                <h3>🔥 "Complete 1 simple task. Get 1 client. Earn your first ₹1,000."</h3>
+            </div>
+        </div>
+    </section>
     <!-- Bonus Section -->
     <section class="bonus-section">
         <div class="list-container">
-            <h2>🎁 Exclusive Bonuses</h2>
+            <h2 class="reveal">🎁 Exclusive Bonuses</h2>
             <div class="vertical-list">
-                <div class="bonus-card-wide">
+                <div class="bonus-card-wide reveal">
                     <div class="bonus-info">
                         <h3>🎯 Resume Building</h3>
                         <p>Professional optimization for Digital Marketing roles.</p>
                     </div>
                 </div>
-                <div class="bonus-card-wide">
+                <div class="bonus-card-wide reveal">
                     <div class="bonus-info">
                         <h3>🎯 Interview Preparation</h3>
                         <p>Mock interviews and real-world marketing Q&A.</p>
                     </div>
                 </div>
-                <div class="bonus-card-wide">
+                <div class="bonus-card-wide reveal">
                     <div class="bonus-info">
                         <h3>🎯 Freelancing Setup</h3>
                         <p>Get your first client on Upwork, Fiverr, or LinkedIn.</p>
                     </div>
                 </div>
-                <div class="bonus-card-wide">
+                <div class="bonus-card-wide reveal">
                     <div class="bonus-info">
                         <h3>🎯 Lifetime Support</h3>
                         <p>Access to our private community and updated AI tools.</p>
@@ -645,7 +665,7 @@
     <section id="reviews" class="testimonials">
         <h2>⭐ Student Results</h2>
         <div class="testimonial-grid">
-            <div class="test-card">
+            <div class="test-card reveal">
                 <h4>Rakesh Jadhav</h4>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -660,7 +680,7 @@
                 </p>
             </div>
 
-            <div class="test-card">
+            <div class="test-card reveal">
                 <h4>PRASAD MAPARI</h4>
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -674,7 +694,7 @@
                 </p>
             </div>
 
-            <div class="test-card">
+            <div class="test-card reveal">
                 <h4>pooja mangale</h4>
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -687,7 +707,7 @@
                     Highly recommended for anyone looking to grow their brand or skills digitally!”
                 </p>
             </div>
-            <div class="test-card">
+            <div class="test-card reveal">
                 <h4>zeeshan shaikh</h4>
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -836,6 +856,9 @@
             <p>📍Navi Mumbai, Maharashtra</p>
         </div>
     </footer>
+    <button id="scrollToTop" class="scroll-btn" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 <style>
   /* Popup container background */
   #videoPopup {
