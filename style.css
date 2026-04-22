@@ -6,7 +6,6 @@
 }
 html{
     font-family: "Roboto", sans-serif;
-    font-family: "Roboto", sans-serif;
     font-size: 65.5%;
     /* ADD THIS LINE: Matches your header height */
     scroll-padding-top: 80px; 
@@ -17,13 +16,6 @@ header {
     left: 0;
     right: 0;
     display: flex;
-    /* justify-content: space-between; 
-    align-items: center;           
-    padding: 1rem 5%;             
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-    position: sticky;
-    z-index: 1000; */
     justify-content: space-around; 
     align-items: center;            /* Vertical centering */
     padding: 0 5%;                  /* Consistent side breathing room */
@@ -36,84 +28,61 @@ header {
 }
 
 .logo img {     
-    height: 85px; 
+    height: 70px; 
     width: auto;             /* Keeps the logo proportions correct */
     display: block;                /* Removes extra space at the bottom of the image */
     transition: transform 0.3s ease;
 }
 
-/* Optional: Slight zoom effect when hovering over the logo */
-.nav-links {
+.navbar{
     display: flex;
-    list-style: none;
-    gap: 2rem;                     /* Modern way to add space between links */
+    gap: 4rem;
 }
-
-.nav-links a {
+.navbar a{
     text-decoration: none;
-    color: #212121;                /* The dark charcoal from the brand colors */
+    font-size: 1.6rem;
+    color: #333;
+    text-decoration: none;
     font-weight: 500;
-    font-size: 1.4rem;
-    transition: color 0.3s;
-    padding-left: 1.2rem;
-}
-
-.nav-links a:hover {
-    color: #f06529;                /* Brand orange on hover */
-}
-.nav-list.active {
-  color: #f06529;
-}
-/* Position the parent container */
-.dropdown {
     position: relative;
+    transition: 0.3s ease;
 }
-
-/* Style the hidden menu */
-.dropdown-menu {
-    display: none;
+/* Hover underline effect */
+.navbar a::after{
+    content: "";
     position: absolute;
-    top: 100%;
     left: 0;
-    background-color: #ffffff;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    border-top: 3px solid #f06529; /* Branded accent */
-    list-style: none;
-    padding: 10px 0;
-    z-index: 1002;
-    border-radius: 0 0 8px 8px;
-}
-
-/* Show on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-.dropdown.active .fa-chevron-down {
-    transform: rotate(180deg);
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #f06529;
     transition: 0.3s;
 }
 
-/* Style individual dropdown links */
-.dropdown-menu li a {
-    padding: 12px 20px;
-    font-size: 1.3rem;
-    color: #212121;
-    display: block;
-    width: 100%;
-    transition: background 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #FFF2EB; /* Light orange tint */
+.navbar a:hover{
     color: #f06529;
 }
 
-/* Icon adjustment */
-.nav-list i {
-    font-size: 1rem;
-    margin-left: 5px;
+.navbar a:hover::after{
+    width: 100%;
 }
+
+/* Ensure the active link stands out */
+.navbar a.navLinks.active {
+    color: #f06529 !important; /* Your brand orange */
+    font-weight: 700;
+}
+
+/* Optional: Add a small underline to the active link */
+.navbar a.navLinks.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #f06529;
+    margin-top: 5px;
+}
+
 /* Styles the Book Free Demo button to match the Techkraftiers look */
 .btn-primary {
     background-color: #f06529; /* Techkraftiers Orange */
@@ -133,13 +102,11 @@ header {
     transform: translateY(-3px); /* Subtle lift on hover */
     box-shadow: 0 6px 20px rgba(240, 101, 41, 0.6);
 }
-.menu {
-    display: none; /* Hidden by default, shown on mobile */
+/* HAMBURGER */
+.menu-toggle{
+    display: none;
+    font-size: 2.5rem;
     cursor: pointer;
-}
-.menu span i{
-    font-size: 2rem;
-    color: #212121;
 }
 
 section {
@@ -147,10 +114,18 @@ section {
     margin: 0; /* REMOVE all external margins to kill white gaps */
     overflow: hidden
 }
+h2{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+h2 span{
+    color: #f06529;
+}
 /* Hero section  */
 .marketing-hero {
     /* FIXED: Use linear-gradient for the overlay and a comma before the URL */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('student3.jpg');  
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/tools/student3.jpg');  
     /* 3. Positioning and Sizing */
     background-size: cover;       
     background-position: center;  
@@ -959,6 +934,88 @@ section {
     color: #555;
 }
 
+/* === Earning Section === */
+/* Earning Section Styles */
+.earning-section {
+    padding: 4rem 6%;
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+.earning-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.earning-subtitle {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.earning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.earn-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #f06529; /* Brand Orange */
+}
+
+.earn-card:hover {
+    transform: translateY(-10px);
+}
+
+.earn-card i {
+    font-size: 2.5rem;
+    color: #f06529;
+    margin-bottom: 15px;
+}
+
+.earn-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.earn-card p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price-tag {
+    display: inline-block;
+    font-weight: bold;
+    color: #f06529;
+    background: #fff2eb;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.marketing-highlight {
+    background: #1d1b1b;
+    color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.marketing-highlight h3 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+
 /* === Bonus Tags Style ==== */
 .bonus-section {
     background-color: #FFF2EB; /* Light tint for section separation */
@@ -1267,9 +1324,52 @@ section {
     font-size: 1rem;
     z-index: 1;
 }
+/* === Animation === */
+/* Animation Base State */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
 
+/* Animation Active State */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Specific delay for grid items to appear one by one */
+.earning-grid .earn-card:nth-child(1) { transition-delay: 0.1s; }
+.earning-grid .earn-card:nth-child(2) { transition-delay: 0.3s; }
+.earning-grid .earn-card:nth-child(3) { transition-delay: 0.5s; }
+
+/* Pulse effect for the Marketing Highlight */
+@keyframes pulse-glow {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(240, 101, 41, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(240, 101, 41, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(240, 101, 41, 0); }
+}
+
+.marketing-highlight {
+    animation: pulse-glow 2s infinite;
+}
 /* --- 5. Responsive Fix (Essential) --- */
+@media (max-width: 1090px){
+    html{
+        font-size: 62.5%; /* slightly smaller for tablets */
+    }
+    header {
+        padding: 1.5rem 4%; /* Reduce side padding to give more room */
+    }
+    .navbar {
+        gap: 2rem; /* Reduce gap between links earlier */
+    }
+    .navbar a {
+        font-size: 1.7rem; /* Slightly smaller text */
+    }
+}
 @media (max-width: 1024px) {
+
     .main-mosaic-container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -1588,96 +1688,84 @@ details[open] summary::after {
 .social-links a:hover {
     color: rgb(52, 95, 171);
 }
+.scroll-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: #f06529; /* Matches your new earning section */
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
 
-@media (max-width: 1090px) {
-    .menu{
+.scroll-btn:hover {
+    background-color: #fae3d9; /* Matches your site header color */
+    color: #333;
+    transform: translateY(-5px);
+}
+
+.scroll-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* === Media Queries === */
+/* === Responsive Adjustments === */
+@media (max-width: 1030px) {
+    .menu-toggle{
         display: block;
-        /* FIXED: Removed position absolute so it sits in the flex row naturally */
-        position: static; 
-        z-index: 1001;
-        top: 3rem;
-        right: 2rem;
     }
-    header {
-        /* FIXED: Changed from column to row to keep logo and menu side-by-side */
-        flex-direction: row; 
-        justify-content: space-between; 
-        padding: 1rem 5%;
-        height: auto; /* Keep height consistent */
-        position: sticky;
-    }
-    .navbar {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px; 
-        left: 0;
-        width: 75%; 
-        /* Ensure height is strictly limited so it HAS to scroll */
-        height: calc(100vh - 80px); 
-        background-color: #ffffff;
-        padding: 2rem;
-        z-index: 1000;
-        
-        /* FIX: Ensure scrollbar is enabled and visible */
-        overflow-y: auto; 
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    .navbar.active {
-        display: flex;
+    header{
+        padding: 1.2rem 2rem;
+        justify-content: space-between;
     }
 
-    .nav-links{
-        display: flex; /* Ensure flex is active */
+    .logo img{
+        height: 70px;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 90%;
+        background: #fff;
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
-        width: 100%;
-        padding-bottom: 5rem; /* Extra space at bottom so last item isn't cut off */
-        
-        /* FIX: Change 'hidden' to 'visible' so it doesn't clip the scrollbar */
-        overflow: visible 
+        padding: 2rem 0;
+        transition: 0.3s;
     }
 
-    .nav-links li a {
-        display: block; /* Critically important for width */
-        width: 80vw;
-        font-size: 1.8rem;
-        padding: 1.2rem 1rem;
-        box-shadow: 0 2px 2px rgba(0,0,0,0.05);
-        color: #212121;
-        font-weight: 500;
-        transition: background 0.3s ease;
-        box-sizing: border-box;
+    .navbar.active{
+        left: 0;
     }
-    .nav-links a:hover {
-        border-left: 1px solid #f06529;
-        background-color: #f5f5f5; 
-        border-left: 4px solid #f06529; /* Adds a nice branded accent */
+
+    .navLinks{
+        font-size: 2rem;
+        padding: 1.4rem 1rem;
+        width: 100%;
+        text-align: left;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: 0.3s;
+        border-radius: 8px;
+    }
+
+    .navLinks:hover{
+        background: rgba(240, 101, 41, 0.08);
+        color: #f06529;
+        padding-left: 1.5rem;
     }
         
     .nav-cta{
         display: none;
-    }
-    .dropdown-menu {
-        display: none; 
-        position: static; 
-        box-shadow: none;
-        padding-left: 2rem;
-        background: transparent;
-        border: none;
-    }
-
-    /* Only show when JavaScript toggles the 'active' class */
-    .dropdown.active .dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-menu li a {
-        font-size: 1.6rem;
-        box-shadow: none;
-        width: 70vw; /* Prevents long text from hitting the edge */
     }
 }
 @media (max-width: 992px) {
@@ -1813,6 +1901,10 @@ details[open] summary::after {
         height: auto;
         /* border-radius: 12px; */
     }
+    .marketing-highlight h3 {
+        font-size: 1.1rem;
+    }
+
 }
 
 @media (max-width: 480px) {
