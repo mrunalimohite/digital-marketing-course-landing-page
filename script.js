@@ -50,59 +50,58 @@ window.addEventListener("scroll", () => {
     });
 });
 
+document.getElementById('inquire-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevents the page from refreshing
 
-// contact form submission
- document.getElementById('inquire-form').addEventListener('submit', function(e) {
-    // 1. Get the values from your input fields
+    // 1. Get the values from all input fields
     const name = document.querySelector('input[name="name"]').value;
     const phone = document.querySelector('input[name="phone"]').value;
     const email = document.querySelector('input[name="email"]').value;
+    const message = document.querySelector('textarea[name="message"]').value;
     const plans = document.querySelector('select[name="plans"]').value;
-    const meassage = document.querySelector('textarea[name="message"]').value;
+    
+    // NEW FIELDS
+    const profession = document.querySelector('select[name="profession"]').value;
+    const startTime = document.querySelector('select[name="start_time"]').value;
+    
+    // Get radio button value (checks which one is selected)
+    const interest = document.querySelector('input[name="interest"]:checked')?.value || "Not specified";
 
     // 2. Format the WhatsApp message
-    const phoneNumber = "+919619525492"; // Enter client's phone number with country code
-    const Sendmessage = `Hello! I'm interested in this program. %0A%0A%0A` +
-        `*name:* ${name}%0A` +
+    const phoneNumber = "+919619525492"; 
+    
+    // We use encodeURIComponent to handle spaces and special characters safely
+    const sendText = `Hello! I'm interested in this program.%0A%0A` +
+        `*Name:* ${name}%0A` +
         `*Phone:* ${phone}%0A` +
         `*Email:* ${email}%0A` +
-        `*Message:* ${meassage}%0A` +
-        `*Plan:* ${plans}`;
+        `*Profession:* ${profession}%0A` +
+        `*Interested:* ${interest}%0A` +
+        `*Plan:* ${plans}%0A` +
+        `*Start Time:* ${startTime}%0A` +
+        `*Message:* ${message}`;
 
-    // 3. Open WhatsApp in a new tab
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${Sendmessage}`;
+    // 3. Open WhatsApp
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${sendText}`;
     window.open(whatsappUrl, '_blank');
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const courseOverview = document.querySelector('.dropdown > a');
-    const dropdownParent = document.querySelector('.dropdown');
-
-    courseOverview.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevents the page from jumping to #courses
-        dropdownParent.classList.toggle('active'); // Toggles the menu visibility
-    });
-});
-
-
 // Amination
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+  var reveals = document.querySelectorAll(".reveal");
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150; // Triggers when element is 150px into view
+  for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150; // Triggers when element is 150px into view
 
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-        }
-    }
+      if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+      }
+  }
 }
-
 // Listen for scroll events
 window.addEventListener("scroll", reveal);
-
 // Run once on load to catch elements already in view
 reveal();
 
@@ -112,15 +111,15 @@ const scrollBtn = document.getElementById("scrollToTop");
 window.addEventListener("scroll", () => {
   // Show button after scrolling down 400px
   if (window.pageYOffset > 400) {
-      scrollBtn.classList.add("show");
+    scrollBtn.classList.add("show");
   } else {
-      scrollBtn.classList.remove("show");
+    scrollBtn.classList.remove("show");
   }
 });
 
 scrollBtn.addEventListener("click", () => {
   // Smooth scroll to the hero section (id="home")
   document.getElementById("home").scrollIntoView({
-      behavior: "smooth"
+    behavior: "smooth"
   });
 });
