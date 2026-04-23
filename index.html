@@ -32,7 +32,10 @@
             <h1>Become Certified Digital Marketing Expert in 60 Days</h1>
             <p>Get <span>Real Industry Experience</span> by working on live client projects with AI-powered tools.</p>
             <p>Advanced Digital Marketing Training for the Next Generation of Marketers | <span>Techkraftiers Digital</span></p>
-            <a href="#pricing" class="btn-primary">Enroll Now</a>
+            <div class="btn-cta">
+                <a href="#pricing" class="btn-primary"> Choose Plan </a>
+                <a href="#contact" class="outline-btn"> Book Free Demo </a>
+            </div>
         </div>
     </section>
     <!-- Pain Point Section -->
@@ -498,7 +501,7 @@
                     <li>Assignments</li>
                     <li>Certificate</li>
                 </ul>
-                <a href="#contact" class="btn-outline">Book Free Demo</a>
+                <a href="#contact" class="btn-outline">Apply Now</a>
             </div>
             <div class="price-card featured reveal">
                 <div class="popular-tag">Most Popular</div>
@@ -509,7 +512,7 @@
                     <li>Internship Access</li>
                     <li>Live Projects</li>
                 </ul>
-                <a href="#contact" class="btn-primary" style="margin-top: 1.2rem;"> Book Free Demo</a>
+                <a href="#contact" class="btn-primary" style="margin-top: 1.2rem;">Apply Now</a>
             </div>
             <div class="price-card reveal">
                 <h3>Pro</h3>
@@ -519,7 +522,7 @@
                     <li>Placement Assistance</li>
                     <li>Freelancing Mastery</li>
                 </ul>
-                <a href="#contact" class="btn-outline">Book Free Demo</a>
+                <a href="#contact" class="btn-outline">Apply Now</a>
             </div>
         </div>
     </section>
@@ -564,7 +567,7 @@
                     <h3>Digital Marketing - Free Demo</h3>
                     <p><span>Start Date:</span> 1st Aprtil 2026</p>
                     <p><span>Duration:</span> 60 Days</p>
-                    <p><span>Saturday & Sunday</span> | 10:00 AM to 2:00 PM</p>
+                    <p><span>Saturday</span> | 10:00 AM to 2:00 PM</p>
                     <p><span>Mode:</span> Online/Offline</p>
                 </div>
                 <a href="#contact" class="batch-btn">Enroll Now</a>
@@ -794,6 +797,32 @@
             </div>
         </div>
     </section>
+    <section class="urgency-section">
+        <div class="urgency-container reveal">
+            <div class="urgency-content">
+                <div class="badge">Limited Time Offer</div>
+                <h2>Ready to Start Your Digital Career?</h2>
+                <p>Don't wait for the next batch! We maintain small groups to ensure personalized 1-on-1 mentorship. Once seats are full, registrations will close.</p>
+                
+                <div class="urgency-grid">
+                    <div class="urgency-item">
+                        <i class="fa-solid fa-users-slash"></i>
+                        <span>Only <strong>20 Seats</strong> Per Batch</span>
+                    </div>
+                    <div class="urgency-item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Next Batch Starts <strong>This Weekend</strong></span>
+                    </div>
+                    <div class="urgency-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span><strong>Limited</strong> Registration Period</span>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn-primary urgency-btn">Secure My Seat Now</a>
+            </div>
+        </div>
+    </section>
     <!-- Contact Us Section -->
     <section class="contact-section" id="contact">
         <div class="contact-container">
@@ -831,11 +860,38 @@
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="text" name="phone" placeholder="Your Phone Number">
                     <input type="email" name="email" placeholder="Your Email" required>
+                    <div class="radio-group">
+                        <p>Are you interested in the course?</p>
+                        <div class="radio-options">
+                            <label class="radio-label">
+                                <input type="radio" name="interest" value="yes" id="interest-yes" required>
+                                <span class="custom-radio"></span>
+                                I'm interested
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="interest" value="no" id="interest-no">
+                                <span class="custom-radio"></span>
+                                I'm not interested
+                            </label>
+                        </div>
+                    </div>
+                    <select name="profession" id="profession" class="form-select rounded-pill">
+                        <option value="">Select your profession</option>
+                        <option value="Student">Student</option>
+                        <option value=" job seeker">Job Seeker</option>
+                        <option value="business owner">Business Owner</option>
+                    </select>
                     <select name="plans" class="form-select rounded-pill">
                         <option value="">Select a plans</option>
                         <option value="Basic">Basic</option>
                         <option value="Advance">Advance</option>
                         <option value="Pro">Pro</option>
+                    </select>
+                    <select name="start_time" id="start_time" class="form-select rounded-pill">
+                        <option value="">When You can Start</option>
+                        <option value="immediately">Immediately</option>
+                        <option value="within_a_week">Within a Week</option>
+                        <option value="within_a_month">Within a Month</option>
                     </select>
                     <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> <span>Book Free Demo</span></button>
