@@ -157,16 +157,16 @@ h2 span{
 }
 
 .hero-content .btn-primary {
-    background-color: #f06529; /* Techkraftiers Orange */
+    display: inline-block; /* Add this line */
+    margin-top: 2rem;
+    background-color: #f06529;
     color: #fff;
-    padding: 1.2rem 2em;
+    padding: 1.4rem 2.4rem;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.3rem;
-    border-radius: 10px; /* Makes it pill-shaped */
-    display: inline-block;
+    font-size: 1.4rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(240, 101, 41, 0.4);
 }
 
 .hero-content .btn-primary:hover {
@@ -174,7 +174,29 @@ h2 span{
     transform: translateY(-3px); /* Subtle lift on hover */
     box-shadow: 0 6px 20px rgba(240, 101, 41, 0.6);
 }
-
+.btn-cta{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.outline-btn{
+    display: inline-block; /* Add this line */
+    margin-top: 2rem;
+    background-color: #f59a1c;
+    color: #fff;
+    padding: 1.4rem 2.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+.outline-btn:hover {
+    background-color: #dc8000;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(250, 174, 41, 0.6);
+}
 /* === Pain point section === */
 .Pain-Point {
     padding: 2rem 9%;
@@ -1521,7 +1543,97 @@ details[open] summary::after {
     summary { font-size: 1rem; padding: 15px 20px; }
 } */
 
+/* === Urgency Section Styling === */
+.urgency-section {
+    background-color: #fcfcfc;
+    padding: 60px 10%;
+    text-align: center;
+}
 
+.urgency-container {
+    background: #1a1a1a; /* Dark background to grab attention */
+    border-radius: 25px;
+    padding: 60px 40px;
+    color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 6px solid #f06529;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.urgency-section .badge {
+    display: inline-block;
+    background: #f06529;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.urgency-section h2 {
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.urgency-section p {
+    font-size: 1.4rem;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.urgency-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.urgency-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    background: rgba(255,255,255,0.05);
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: 1px dashed #555;
+}
+
+.urgency-item i {
+    color: #f06529;
+    font-size: 1.8rem;
+}
+
+.urgency-item strong {
+    color: #f06529;
+}
+
+.urgency-btn {
+    padding: 1.5rem 3.5rem !important;
+    font-size: 1.4rem !important;
+}
+
+/* Mobile Tweak for Urgency */
+@media (max-width: 768px) {
+    .urgency-container {
+        padding: 40px 20px;
+    }
+    .urgency-section h2 {
+        font-size: 2.2rem;
+    }
+    .urgency-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
 /* ==== Contact Section Styling ==== */
 .contact-section {
     background-color: #1a1a1a; /* Dark charcoal background */
@@ -1541,6 +1653,7 @@ details[open] summary::after {
 /* Left Panel Styling */
 .contact-info-panel {
     flex: 1;
+    margin-top: 14rem;
 }
 
 .contact-info-panel h2 {
@@ -1662,6 +1775,116 @@ details[open] summary::after {
     color: #fff;
     font-size: 2rem;
 
+}
+/* Radio Group Container */
+.radio-group {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.radio-group p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.radio-options {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hide default radio */
+.radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Design the Label */
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Custom Circle
+.custom-radio {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border: 2px solid #444;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+.radio-label:hover .custom-radio {
+    border-color: #f06529;
+}
+
+.radio-label input:checked + .custom-radio {
+    border-color: #f06529;
+    background-color: rgba(240, 101, 41, 0.1);
+}
+.radio-label input:checked + .custom-radio::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #f06529;
+    border-radius: 50%;
+} */
+ /* Updated Custom Circle */
+.custom-radio {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border: 1px solid #555; /* Thinner border to match your inputs */
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    flex-shrink: 0; /* Prevents shrinking on small screens */
+}
+.radio-group p{
+    color: #aaa;
+}
+.radio-label span {
+    color: #aaa;
+    font-size: 1.2rem;
+}
+/* Hover effect - just a slight brighten */
+.radio-label:hover .custom-radio {
+    border-color: #f06529;
+}
+
+/* Checked state: Remove the glow, keep it clean */
+.radio-label input:checked + .custom-radio {
+    border-color: #f06529;
+    background-color: transparent; /* Cleaner look */
+}
+
+/* The inner dot - adjusted for a premium feel */
+.radio-label input:checked + .custom-radio::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #f06529;
+    border-radius: 50%;
+    box-shadow: none; /* Removes the "highlighted" glow effect */
 }
 /* === Footer ==== */
 .footer-content{
