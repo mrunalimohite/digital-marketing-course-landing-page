@@ -1701,7 +1701,9 @@ details[open] summary::after {
     font-size: 1.6rem;
     margin-bottom: 5px;
 }
-
+.text-box{
+    max-width: 300px;
+}
 .text-box span {
     color: #ccc;
     font-size: 1.4rem;
