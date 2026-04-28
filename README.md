@@ -68,7 +68,9 @@ This landing page is designed to:
 
 Mrunali Mohite  
 Frontend Developer
+## 📸 Preview
 
+![Landing Page Screenshot](Screenshot.png)
 
 ## ⭐ Show Your Support
 
