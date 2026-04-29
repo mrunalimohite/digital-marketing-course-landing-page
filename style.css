@@ -1724,7 +1724,15 @@ details[open] summary::after {
     flex-direction: column;
     gap: 15px;
 }
-
+.contact-form-panel h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    text-align: center;
+}
+.contact-form-panel h3 span {
+    color: #f06529;
+}
 .contact-form-panel input, 
 .contact-form-panel textarea {
     background-color: #333;
