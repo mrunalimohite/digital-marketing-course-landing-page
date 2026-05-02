@@ -862,7 +862,7 @@
                 <form action="#" method="post" id="inquire-form">
                     <h3>Fill the form to book your <span>FREE Demo</span> class</h3>
                     <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="text" name="phone" placeholder="Your Phone Number">
+                    <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <select name="profession" id="profession" class="form-select rounded-pill">
                         <option value="">Select your profession</option>
